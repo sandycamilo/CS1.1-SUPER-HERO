@@ -34,6 +34,11 @@ class Hero:
     def add_ability(self, ability):
         self.abilities.append(ability)
 
+    def attack(self):
+        total_damage = 0
+        for ability in self.abilities:
+            total_damage += ability.attack()
+
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
