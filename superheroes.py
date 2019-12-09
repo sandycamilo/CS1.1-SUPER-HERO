@@ -234,10 +234,8 @@ class Arena:
         '''Battle team_one and team_two together.'''
         self.team_one.attack(self.team_two)
 
-if __name__ == "__main__":
-    # If you run this file from the terminal
-    # this block is executed.
-    ability = Ability("Great Debugging", 50)
-    hero = Hero("Grace Hopper", 200)
-    hero.add_ability(ability)
-    print(hero.abilities)
+# if __name__ == "__main__":
+#     ability = Ability("Great Debugging", 50)
+#     hero = Hero("Grace Hopper", 200)
+#     hero.add_ability(ability)
+#     print(hero.abilities)
