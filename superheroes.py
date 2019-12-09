@@ -39,6 +39,22 @@ class Hero:
         for ability in self.abilities:
             total_damage += ability.attack()
 
+        return total_damage
+    
+    def take_damage(self, damage):
+        '''Updates self.current_health to reflect the damage minus the defense.
+        '''
+        defense = self.defend()
+        self.current_health -= damage - defense
+    
+    def is_alive(self):
+        '''Return true or False depending on whether the hero is alive or no.'''
+        if self.current_health <= 0:
+            return False
+        else:
+            True
+
+
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
