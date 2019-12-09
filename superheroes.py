@@ -16,7 +16,31 @@ class Ability:
         random_value = random.randint(0,self.max_damage)
         return random_value
 
+class Hero:
+    def __init__(self, name, starting_health=100):
+      '''Instance properties:
+          abilities: List
+          armors: List
+          name: String
+          starting_health: Integer
+          current_health: Integer
+      '''
+      self.abilities = list()
+      self.armors = list()
+      self.name = name
+      self.starting_health = starting_health
+      self.current_health = starting_health
 
+    def add_ability(self, ability):
+        self.abilities.append(ability)
+
+if __name__ == "__main__":
+    # If you run this file from the terminal
+    # this block is executed.
+    ability = Ability("Great Debugging", 50)
+    hero = Hero("Grace Hopper", 200)
+    hero.add_ability(ability)
+    print(hero.abilities)
 
 
 if __name__ == "__main__":
